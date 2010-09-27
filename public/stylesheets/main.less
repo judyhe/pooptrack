@@ -1,0 +1,50 @@
+@brown: #2c1d07;
+@blue: #a8dae7;
+@page_width: 981px;
+
+.hidden_text{ overflow:hidden; text-indent: -10000px}
+
+/* -------- mini reset */
+html, body, div, form, fieldset, th, td, ol, ul, li{margin: 0; padding: 0;}
+fieldset, img {border: 0;}
+
+table {/* tables still need 'cellspacing="0"' in the markup */
+  border-collapse: separate;border-spacing: 0;}
+
+
+/* --------  some general classes */
+body {
+  font-family:Helvetica, Arial, sans-serif;
+  font-size: 76%;
+  color:#242424;
+  background: @brown;
+  }
+  
+p{font-size:1em;line-height:1.8em;margin:1em 0;}
+
+ol, ul, li {list-style: none; font-size: 1.0em; line-height: 1.8em;}
+  
+h1{font-weight:normal;}
+
+img {display:block;}
+
+.bulleted li{list-style-type:disc;}
+.numbered li{list-style-type:decimal}
+
+.float_left{float:left;}
+.float_right{float:right;}
+
+.clear{clear:both;}
+.clearfix{*zoom:1}/* for ie */
+.clearfix:after{content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+
+
+/* header */
+#header_wrapper{height:54px; background:url("/images/bg_header.gif") repeat-x; }
+#header{width:@page_width; margin: 0 auto; }
+a#logo{background:url("/images/logo_pooptrack.png") no-repeat; display:block; width:114px; height:54px;}
+
+/* teaser */
+#teaser_wrapper{border:1px solid #fff; border-width:1px 0; margin-top: 1px; background:url("/images/bg_teaser.png") repeat-x; height:702px; }
+#teaser{background:url("/images/pooptrack_teaser.png") no-repeat center center; height:702px; text-indent:-10000px; .hidden_text; }
+
