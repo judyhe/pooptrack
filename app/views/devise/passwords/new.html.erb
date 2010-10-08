@@ -6,7 +6,15 @@
   <p><%= f.label :email, :class => "inlined" %>
   <%= f.text_field :email, :class => "input-text" %></p>
 
-  <p><%= f.submit "Send me reset password instructions" %></p>
+  <p>
+		<button type="submit" class="giant_blue_button clearfix">
+			<div class="button_blue">
+				Send reset password instructions
+				<div class="button_blue_right"></div>
+			</div>
+		</button>
+	</p>
+	
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>

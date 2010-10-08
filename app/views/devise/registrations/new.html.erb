@@ -15,7 +15,14 @@
   <p><%= f.label :password_confirmation, :class => "inlined" %>
   <%= f.password_field :password_confirmation, :class => "input-text" %></p>
 
-  <p><%= f.submit "Sign up" %></p>
+  <p>
+		<button type="submit" class="giant_blue_button clearfix">
+			<div class="button_blue">
+				Sign up
+				<div class="button_blue_right"></div>
+			</div>
+		</button>
+	</p>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>

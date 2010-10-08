@@ -19,12 +19,19 @@ table {/* tables still need 'cellspacing="0"' in the markup */
 
 
 /* --------  some general classes */
+.rounded_corners (@radius: 5px) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
 body {
   font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 76%;
   color:#242424;
 	background:@brown;
   }
+
 
 a {color:@dark_blue; text-decoration:none}
 a:hover{text-decoration:underline}
@@ -38,12 +45,15 @@ input{
 	font-size:16px;
 	padding:5px;
 	border:1px solid @gray;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
+	.rounded_corners(3px);
 }
 input[type="text"], input[type="password"]{background:url(/images/bg_input.png) repeat-x;}
-input:focus{border-color:@dark_gray}
+input:focus{
+	border-color:@dark_blue;
+	-moz-box-shadow: 0 0 5px @light_blue;
+	-webkit-box-shadow: 0 0 5px @light_blue;
+	box-shadow: 0 0 5px @light_blue; 
+}
 
 /* inline labels in inputs */
 input.input-text{
@@ -66,6 +76,35 @@ label.inlined + input.input-text {
 	margin-top: -27px;
 }
 
+button.giant_blue_button{
+	border:0;
+	padding:0;
+	background:none;
+	cursor:pointer;
+	:hover .button_blue{
+		background-position:bottom left;
+		.button_blue_right {
+			background-position:bottom right;
+		}
+	}
+}
+
+.button_blue{
+	background:url(/images/button_blue.png) no-repeat;
+	line-height:58px;
+	padding-left:30px;
+	position:relative;
+	font-size:16px;
+	margin-right:30px;
+	.button_blue_right{
+		position:absolute;
+		right:-30px;
+		top:0;
+		height:58px;
+		width:30px;
+		background:url(/images/button_blue.png) no-repeat right top;
+	}
+}
 
 
 img {display:block;}
@@ -86,13 +125,12 @@ img {display:block;}
 .transparent_border{
 	padding:12px;
 	background:url("/images/transparency_10.png");
-	border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
+	.rounded_corners(10px);
 	-moz-box-shadow: 0 3px 10px @dark_blue;
 	-webkit-box-shadow: 0 3px 10px @dark_blue;
 	box-shadow: 0 3px 10px @dark_blue;
 }
+
 
 /* header */
 #header_wrapper{height:44px; background:url("/images/bg_header.gif") repeat-x; }
@@ -130,9 +168,7 @@ a#logo:hover{background-position:0 -44px;}
 #user_management{
 	background: @almost_white;
 	padding:20px;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
+	.rounded_corners;
 }
 
 /* main layout */
