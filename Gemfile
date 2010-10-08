@@ -6,6 +6,8 @@ gem 'less', '1.2.21'
 gem 'devise', '1.1.3'
 gem 'couchrest', '1.0.1'
 gem 'couchrest_model', '1.0.0.beta7'
+gem 'jquery-rails', '0.2.1'
+gem 'simple_form'
 
 group :development do
   gem 'rspec-rails', '2.0.0.beta.22'
