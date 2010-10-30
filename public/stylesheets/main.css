@@ -30,30 +30,46 @@ ol, ul, li {
 }
 h1, h2, h3 { color: #271a07; }
 h1 { font-weight: normal; }
-input {
+form.user input.string { width: 50%; }
+form.user input.password { width: 50%; }
+.simple_form label {
+  display: block;
+  margin: 0.5em 0;
+}
+.simple_form div.input { margin: 1.5em 0; }
+.simple_form .field_with_errors input { border-color: #c63636; }
+.simple_form input {
   font-size: 16px;
   padding: 5px;
+  margin-right: 10px;
   border: 1px solid #aaaaaa;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
+  background: url(/images/bg_input.png) repeat-x;
+  position: relative;
 }
-input[type="text"], input[type="password"] { background: url(/images/bg_input.png) repeat-x; }
-input:focus {
+.simple_form input:focus {
   border-color: #3791a6;
   -moz-box-shadow: 0 0 5px #a8dae7;
   -webkit-box-shadow: 0 0 5px #a8dae7;
   box-shadow: 0 0 5px #a8dae7;
 }
-input.input-text {
-  position: relative;
-  z-index: 2;
-  display: block;
+.simple_form input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+.simple_form input[type="checkbox"] + label {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  line-height: 16px;
 }
 label.inlined {
-  position: relative;
+  position: absolute;
   z-index: 1;
   padding-left: 6px;
+  margin-top: 8px;
   opacity: 0.5;
   -webkit-transition: opacity 0.15s linear;
 }
@@ -62,7 +78,6 @@ label.has-text {
   opacity: 0;
   -webkit-transition-duration: 0s;
 }
-label.inlined + input.input-text { margin-top: -27px; }
 button.giant_blue_button {
   border: 0;
   padding: 0;
@@ -87,7 +102,21 @@ button.giant_blue_button:hover .button_blue .button_blue_right { background-posi
   width: 30px;
   background: url(/images/button_blue.png) no-repeat right top;
 }
+#error_explanation {
+  background: #ffcdcd;
+  padding: 10px;
+  border: 1px solid #c63636;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+#error_explanation h2 {
+  font-size: 1em;
+  color: #860000;
+}
+#error_explanation ul { margin: 1em 0; }
 img { display: block; }
+.error { color: #c63636; }
 .bulleted li { list-style-type: disc; }
 .numbered li { list-style-type: decimal; }
 .hidden_text {
@@ -145,11 +174,11 @@ a#logo:hover { background-position: 0 -44px; }
   border: 1px solid #ffffff;
   border-width: 1px 0;
   background: url("/images/bg_teaser.png") repeat-x;
-  height: 702px;
+  height: 554px;
 }
 #teaser {
   background: url("/images/pooptrack_teaser.png") no-repeat center center;
-  height: 702px;
+  height: 554px;
   overflow: hidden;
   text-indent: -10000px;
 }

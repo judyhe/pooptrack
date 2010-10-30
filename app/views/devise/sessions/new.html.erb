@@ -1,24 +1,26 @@
 <h1>Log in</h1>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <p><%= f.label :username, :class => "inlined" %>
-  <%= f.text_field :username, :class => "input-text" %></p>
+<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
-  <p><%= f.label :password, :class => "inlined" %>
-  <%= f.password_field :password, :class => "input-text" %></p>
+	<%= devise_error_messages! %>
+	
+  <%= f.input :username, :label_html => {:class => "inlined"}, :input_html => {:class => "inlined-label-input"} %>
 
-  <% if devise_mapping.rememberable? -%>
-    <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
-  <% end -%>
-
-  <p>
+	<%= f.input :password, :label_html => {:class => "inlined"}, :input_html => {:class => "inlined-label-input"} %>
+	
+	<% if devise_mapping.rememberable? -%>
+	  <%= f.input :remember_me, :as => :boolean %>
+	<% end -%>
+	
+	<div class="input">
 		<button type="submit" class="giant_blue_button clearfix">
 			<div class="button_blue">
 				Log in
 				<div class="button_blue_right"></div>
 			</div>
 		</button>
-	</p>
+	</div>
+	
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>

@@ -1,6 +1,6 @@
 var Pooptrack = {
 	inline_input : function(){
-		$("label.inlined + input.input-text").each(function (type) {
+		$(".inlined-label-input").each(function (type) {
 			var input = $(this);
 			$(window).bind('load', function () {
 				setTimeout(function(){

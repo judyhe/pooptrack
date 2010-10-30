@@ -1,15 +1,15 @@
 <h1>Forgot your password?</h1>
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+<%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+
   <%= devise_error_messages! %>
 
-  <p><%= f.label :email, :class => "inlined" %>
-  <%= f.text_field :email, :class => "input-text" %></p>
+	<%= f.input :email, :label_html => {:class => "inlined"}, :input_html => {:class => "inlined-label-input"} %>
 
   <p>
 		<button type="submit" class="giant_blue_button clearfix">
 			<div class="button_blue">
-				Send reset password instructions
+				&nbsp;Send reset email&nbsp;
 				<div class="button_blue_right"></div>
 			</div>
 		</button>

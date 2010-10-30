@@ -132,5 +132,5 @@ DEPENDENCIES
   rspec (= 2.0.0.beta.22)
   rspec-rails (= 2.0.0.beta.22)
   ruby-debug19
-  simple_form
+  simple_form (= 1.2.2)
   sqlite3-ruby (= 1.2.5)
