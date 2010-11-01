@@ -2,7 +2,7 @@ Pooptrack::Application.routes.draw do
   devise_for :users, :path_names => {:sign_in => "log_in", :sign_out => "log_out"}
   # need a users root
   
-  resource :poops
+  resources :poops
   
   #get "pages/home"
 
@@ -17,6 +17,8 @@ Pooptrack::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
+  match '/:username' => 'poops#index', :as => :user_root
+  
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
