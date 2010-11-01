@@ -1,6 +1,9 @@
 Pooptrack::Application.routes.draw do
   devise_for :users, :path_names => {:sign_in => "log_in", :sign_out => "log_out"}
-
+  # need a users root
+  
+  resource :poops
+  
   #get "pages/home"
 
   # The priority is based upon order of creation:

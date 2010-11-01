@@ -1,0 +1,11 @@
+<% simple_form_for @poop do |f| %>
+	
+	<%= couchdb_rev_field f, @poop %>
+
+	<%= f.input :pooped_on %>
+	
+	<%= f.input :bloody %>
+	
+	<%= f.submit "Save" %>
+	
+<% end %>
