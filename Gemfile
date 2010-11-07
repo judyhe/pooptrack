@@ -11,7 +11,7 @@ gem 'simple_form', '1.2.2'
 
 group :development do
   gem 'rspec-rails', '2.0.0.beta.22'
-	gem 'ruby-debug19'
+	# gem 'ruby-debug19'
 	gem 'mysql', '2.8.1'
 end
 
