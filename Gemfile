@@ -11,7 +11,7 @@ gem 'simple_form'
 
 group :development do
   gem 'rspec-rails'
-	gem 'ruby-debug19'
+	#gem 'ruby-debug19'
 	gem 'mysql'
 end
 
