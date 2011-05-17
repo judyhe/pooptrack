@@ -1,6 +1,6 @@
 require 'openid/store/filesystem'
 
-OmniAuth.config.full_path = "https://www.pooptrack.com"
+OmniAuth.config.full_host = "https://www.pooptrack.com"
 
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :open_id, OpenID::Store::Filesystem.new('./tmp')
