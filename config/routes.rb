@@ -19,6 +19,8 @@ Pooptrack::Application.routes.draw do
 
   match '/:username' => 'poops#index', :as => :user_root
   
+  match 'auth/:provider/callback' => 'auth#create'
+  
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

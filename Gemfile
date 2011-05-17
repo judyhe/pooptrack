@@ -1,18 +1,17 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.1'
-gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'less'
+gem 'rails', '3.0.3'
+gem 'pg', '0.9.0'
 gem 'devise'
-gem 'couchrest'
-gem 'couchrest_model', :git => 'git://github.com/couchrest/couchrest_model.git'
-gem 'jquery-rails'
+gem 'cancan', '1.5.1'
+gem 'couchrest_model', :git => 'git://github.com/givmo/couchrest_model.git'
 gem 'simple_form'
+gem 'omniauth'
 
 group :development do
+  gem 'less'
   gem 'rspec-rails'
-	#gem 'ruby-debug19'
-	gem 'mysql'
+  gem 'ruby-debug19'
 end
 
 group :test do
